@@ -1,3 +1,8 @@
 source "https://rubygems.org"
-gem "jekyll"
-gem 'rexml', '~> 3.2.4' # You can adjust the version as needed
+gem 'jekyll', '= 3.9.5'
+
+gem "github-pages"
+gem 'rexml'
+
+gem "webrick", "~> 1.8"
+
