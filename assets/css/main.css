@@ -221,7 +221,31 @@ img {
 .section-wrapper:nth-child(odd) .paragraph-text {
   color: #fff;
 }
+.project-technology {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 100px;
+  padding: 5px 10px; 
+  border-radius: 20px; 
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #fff; 
+  transition: transform 0.3s ease; 
+  
+}
 
+.project-technology:nth-child(odd) {
+  background-color: #ff7f50;
+}
+
+.project-technology:nth-child(even) {
+  background-color: #87ceeb; 
+}
+
+/* Add hover effect */
+.project-technology:hover {
+  transform: scale(1.1); 
+}
 .paragraph-text {
   font-family: 'PT Sans', sans-serif;
   font-size: 20.8px;
@@ -295,6 +319,14 @@ img {
   width: 96.6666px;
   height: 96.6666px;
   background-color: #fff;
+}
+
+.technical-skills .card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Adjust as needed */
+  align-items: center; /* Adjust as needed */
+  
 }
 
 .project-card {
