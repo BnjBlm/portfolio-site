@@ -106,7 +106,7 @@ let render_projects = (slug) => {
             "link": "",
             "title": "Mobile robot dog",
             "demo": false,
-            "technologies": ["Arduino", "Wii Nunchuck", "Car-Seat Motors"],
+            "technologies": ["Arduino", "Wii Nunchuck", "Firmware"],
             "description": "The robot that started it all for me! I started building this for my little sister while working in research on the Aurora Borealis -- this led me to discover that I liked building robots way more than I liked building differential equations. This robot is powered by two arduinos, controlled wirelessly using a wii nunchuck, and is powered by car-seat motors.",
             "categories": ["m_f_e", "mobile"]
         },
