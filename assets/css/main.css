@@ -210,6 +210,8 @@ img {
   background-repeat: repeat;
 }
 
+
+
 .section-wrapper:nth-child(odd) .section-heading {
   color: #fff;
 }
@@ -221,6 +223,18 @@ img {
 .section-wrapper:nth-child(odd) .paragraph-text {
   color: #fff;
 }
+
+
+.semi-transparent-button:nth-child(odd) {
+  background-color: #ff7f50;
+}
+
+.semi-transparent-button:nth-child(even) {
+  background-color: #87ceeb; 
+}
+
+
+
 .project-technology {
   display: inline-block;
   margin-right: 10px;
@@ -320,6 +334,20 @@ img {
   height: 96.6666px;
   background-color: #fff;
 }
+
+.technical-skills .card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Adjusts alignment to space buttons evenly */
+  align-items: center;
+}
+
+.semi-transparent-button {
+  flex: 1; /* Allows buttons to grow and fill the available space */
+  margin: 0 10px; /* Adjust margin as needed for spacing between buttons */
+  min-width: calc((100% / 4) - 20px); /* Adjust based on the number of buttons per row, subtracting margin */
+}
+
 
 .technical-skills .card__meta {
   display: flex;
@@ -484,6 +512,54 @@ a {
   margin: 0 5px;
 }
 
+/* .project-categories {
+  display: grid;
+  grid-gap: 5px;
+  grid-row-gap: 10px;
+  margin: 20px 0;
+  width: 100%;
+  /* Default to 2 columns for very small widths if needed */
+  /* grid-template-columns: repeat(2, 1fr); */
+/* } */ 
+
+
+.project-categories {
+  display: -ms-grid;
+  display: grid;
+  /* -ms-grid-columns: (minmax(120px, 1fr))[auto-fill]; */
+      /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
+  margin: 20px 0;
+  grid-gap: 5px;
+  grid-row-gap: 10px;
+  width: 100%;
+
+  grid-gap: 5px;
+  /* Default to 2 columns for very small widths if needed */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Adjust for medium screens to have 4 columns */
+@media screen and (min-width: 600px) {
+  .project-categories {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Adjust for larger screens to have 6 columns */
+@media screen and (min-width: 900px) {
+  .project-categories {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Additional breakpoint if necessary for very large screens */
+@media screen and (min-width: 1200px) {
+  .project-categories {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+
 .project-technologies {
   display: -ms-grid;
   display: grid;
@@ -510,6 +586,46 @@ a {
   margin-right: 0px;
 }
 
+.project-category-button
+{
+  display: flex;
+  padding: 10px; /* Adjust padding to ensure visual balance */
+  white-space: normal; /* Allow text to wrap */
+  text-align: center; /* Ensure wrapped text lines are also centered */
+
+  /* flex: 1.5; Allows buttons to grow and fill the available space */
+  /* margin: 10px 10px; Adjust margin as needed for spacing between buttons */
+  min-width: calc((100% / 2) - 20px); /*Adjust based on the number of buttons per row, subtracting margin
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 calc(50% - 10px); /* Default to 2 buttons per row, adjusting for gap */
+  margin: 5px;
+}
+
+
+@media (min-width: 600px) {
+  .project-category-button {
+    flex: 1 1 calc(25% - 10px); /* Adjust for 4 buttons per row */
+  }
+}
+
+@media (min-width: 900px) {
+  .project-category-button {
+    flex: 1 1 calc(16.66% - 10px); /* Adjust for 6 buttons per row */
+  }
+}
+
+  .project-category-button:nth-child(odd) {
+    background-color: #ff7f50;
+  }
+  
+  .project-category-button:nth-child(even) {
+    background-color: #87ceeb; 
+  }
+  
+
+
 /* Here follow all the media queries */
 @media screen and (max-width: 850px) {
 
@@ -530,6 +646,16 @@ a {
   }
 }
 
+@media screen and (max-width: 775px) {
+  .project-categories {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 20px auto;
+  }
+}
 @media screen and (max-width: 600px) {
 
   .head-menu-wrap {
