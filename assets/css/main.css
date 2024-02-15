@@ -106,52 +106,23 @@ img {
 .head-buttons a {
   color: inherit;
 }
-
-
 .head-menu-wrap {
   position: absolute;
   bottom: 40px;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-
-  display: -ms-grid;
-
+  transform: translate(-50%, 0);
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto auto;
-  grid-column-gap: 10px;
-  
+  grid-template-columns: repeat(2, auto); /* Adjust based on the number of columns you need */
+  gap: 10px; /* This sets both row and column gaps to 10px */
   margin: 0 auto;
 }
-/* 
-.head-menu-wrap  {
-  display: -ms-grid;
-  display: grid;
-
-  margin: 20px 0;
-  grid-gap: 5px;
-  grid-row-gap: 10px;
-  width: 100%;
-  grid-template-columns: repeat(2, 1fr); */
+.line-break {
+  display: block;
+  margin-top: -10px; /* Adjust as needed */
+  margin-bottom: -10px; /* Adjust as needed */
+  padding-top: 0px; /* Adjust space above the element */
+  padding-bottom: 0px; 
 }
-
-/* .head-menu-wrap {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-
-  display: -ms-grid;
-
-  display: grid;
-  -ms-grid-columns: auto auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto auto;
-  grid-column-gap: 10px;
-  
-  margin: 0 auto;
-} */
 
 .justify-text {
   text-align: justify;
@@ -562,16 +533,6 @@ a {
   margin: 0 5px;
 }
 
-/* .project-categories {
-  display: grid;
-  grid-gap: 5px;
-  grid-row-gap: 10px;
-  margin: 20px 0;
-  width: 100%;
-  /* Default to 2 columns for very small widths if needed */
-  /* grid-template-columns: repeat(2, 1fr); */
-/* } */ 
-
 
 .project-categories {
   display: -ms-grid;
@@ -586,23 +547,6 @@ a {
   /* Default to 2 columns for very small widths if needed */
   /* grid-template-columns: repeat(2, 1fr); */
 }
-/* 
-@media screen and (min-width: 600px) {
-  .project-categories {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .project-categories {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .project-categories {
-    grid-template-columns: repeat(8, 1fr);
-  }
-} */
 
 
 .project-technologies {
@@ -701,15 +645,14 @@ a {
     margin: 20px auto;
   }
 }
-@media screen and (max-width: 600px) {
-
-  .head-menu-wrap {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    width: 80%;
-  }
+@media screen and (min-width: 620px) {
+    .head-menu-wrap {
+      grid-template-columns: repeat(3, auto); /* Adjust for fewer columns on smaller screens */
+      gap: 10px; /* Keep the gap consistent */
+      width: 80%; /* Adjust width as necessary */
+    }
+  
+  
 
   #nav {
     background-attachment: unset;
@@ -763,14 +706,14 @@ a {
   }
 }
 
-@media screen and (max-width: 400px) {
+
+@media screen and (min-width: 900px) {
   .head-menu-wrap {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-columns: repeat(6, auto); /* Consistent adjustment for very small screens */
+    gap: 10px; /* Maintains the gap consistency */
   }
 }
+
 
 @media screen and (max-height: 525px) {
 

@@ -1,17 +1,24 @@
 .semi-transparent-button {
-  display: block;
+  display: inline-flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 8px;
-  max-width: 160px;
-  min-width: 120px;
-  background: transparent; /* fallback color for old browsers */
+  padding: 0px 0px 0px 0px; /* Adjust padding as needed */
+  min-width: 130px; /* Adjust width as needed */
+  min-height: 80px; /* Minimum height to accommodate two lines of text + padding */
+  gap: 10px; /* This sets both row and column gaps to 10px */
+
+  height: auto; /* Set height to auto to accommodate multiple lines */
+  background: transparent;
   border-radius: 2px;
   color: #fff;
-  text-align: center;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.1s ease-out;
+  white-space: normal; /* Override previous nowrap to allow wrapping */
+  text-overflow: clip; /* Adjust as needed */
 }
 .semi-transparent-button:hover,
 .semi-transparent-button:active {
