@@ -106,18 +106,7 @@ img {
 .head-buttons a {
   color: inherit;
 }
-/* 
 
-.head-menu-wrap  {
-  display: -ms-grid;
-  display: grid;
-
-  margin: 20px 0;
-  grid-gap: 5px;
-  grid-row-gap: 10px;
-  width: 100%;
-  grid-template-columns: repeat(2, 1fr);
-} */
 
 .head-menu-wrap {
   position: absolute;
@@ -135,6 +124,34 @@ img {
   
   margin: 0 auto;
 }
+/* 
+.head-menu-wrap  {
+  display: -ms-grid;
+  display: grid;
+
+  margin: 20px 0;
+  grid-gap: 5px;
+  grid-row-gap: 10px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr); */
+}
+
+/* .head-menu-wrap {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+
+  display: -ms-grid;
+
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+  grid-column-gap: 10px;
+  
+  margin: 0 auto;
+} */
 
 .justify-text {
   text-align: justify;
@@ -268,6 +285,22 @@ img {
   background-color: #87ceeb; 
 }
 
+.semi-transparent-button-proj:nth-child(odd) {
+  background-color: #ff7f50;
+}
+
+.semi-transparent-button-proj:nth-child(even) {
+  background-color: #87ceeb; 
+}
+
+.semi-transparent-button-nav:nth-child(odd) {
+  background-color: #ff7f50;
+}
+
+.semi-transparent-button-nav:nth-child(even) {
+  background-color: #87ceeb; 
+}
+
 /* Add hover effect */
 .project-technology:hover {
   transform: scale(1.1); 
@@ -354,35 +387,16 @@ img {
   align-items: center;
 }
 
-.semi-transparent-button {
-  flex: 1; /* Allows buttons to grow and fill the available space */
-  /* margin: 0 10px;  */
-  min-width: calc((100% / 6) ); /* Adjust based on the number of buttons per row, subtracting margin */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  white-space: normal;
-  /* padding: 10px 10px;  */
-  /* overflow: hidden;  */
-  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
-  /* word-break: break-word; */
-}
-
 
 .semi-transparent-button-proj {
   flex: 1; /* Allows buttons to grow and fill the available space */
-  /* margin: 0 10px;  */
   min-width: calc((100% / 6) ); /* Adjust based on the number of buttons per row, subtracting margin */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   white-space: normal;
-  /* padding: 10px 10px;  */
-  /* overflow: hidden;  */
   text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
-  /* word-break: break-word; */
 }
 
 .technical-skills .card__meta {
