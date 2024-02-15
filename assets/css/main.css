@@ -106,6 +106,18 @@ img {
 .head-buttons a {
   color: inherit;
 }
+/* 
+
+.head-menu-wrap  {
+  display: -ms-grid;
+  display: grid;
+
+  margin: 20px 0;
+  grid-gap: 5px;
+  grid-row-gap: 10px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+} */
 
 .head-menu-wrap {
   position: absolute;
@@ -117,8 +129,8 @@ img {
   display: -ms-grid;
 
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
   grid-column-gap: 10px;
   
   margin: 0 auto;
@@ -344,10 +356,34 @@ img {
 
 .semi-transparent-button {
   flex: 1; /* Allows buttons to grow and fill the available space */
-  margin: 0 10px; /* Adjust margin as needed for spacing between buttons */
-  min-width: calc((100% / 4) - 20px); /* Adjust based on the number of buttons per row, subtracting margin */
+  /* margin: 0 10px;  */
+  min-width: calc((100% / 6) ); /* Adjust based on the number of buttons per row, subtracting margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: normal;
+  /* padding: 10px 10px;  */
+  /* overflow: hidden;  */
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+  /* word-break: break-word; */
 }
 
+
+.semi-transparent-button-proj {
+  flex: 1; /* Allows buttons to grow and fill the available space */
+  /* margin: 0 10px;  */
+  min-width: calc((100% / 6) ); /* Adjust based on the number of buttons per row, subtracting margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: normal;
+  /* padding: 10px 10px;  */
+  /* overflow: hidden;  */
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+  /* word-break: break-word; */
+}
 
 .technical-skills .card__meta {
   display: flex;
@@ -526,38 +562,33 @@ a {
 .project-categories {
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (minmax(120px, 1fr))[auto-fill]; */
-      /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
+  -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   margin: 20px 0;
   grid-gap: 5px;
   grid-row-gap: 10px;
   width: 100%;
-
-  grid-gap: 5px;
+  min-width: none;
   /* Default to 2 columns for very small widths if needed */
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
 }
-
-/* Adjust for medium screens to have 4 columns */
+/* 
 @media screen and (min-width: 600px) {
   .project-categories {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Adjust for larger screens to have 6 columns */
 @media screen and (min-width: 900px) {
   .project-categories {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-
-/* Additional breakpoint if necessary for very large screens */
 @media screen and (min-width: 1200px) {
   .project-categories {
     grid-template-columns: repeat(8, 1fr);
   }
-}
+} */
 
 
 .project-technologies {
