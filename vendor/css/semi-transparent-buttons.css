@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0px 0px 0px 0px; /* Adjust padding as needed */
-  min-width: 130px; /* Adjust width as needed */
+  min-width: 135px; /* Adjust width as needed */
   min-height: 80px; /* Minimum height to accommodate two lines of text + padding */
   gap: 10px; /* This sets both row and column gaps to 10px */
 
