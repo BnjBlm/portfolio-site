@@ -107,17 +107,15 @@ img {
   color: inherit;
 }
 .head-menu-wrap {
-  /* position: absolute; */
   bottom: 40px;
   left: 50%;
-  /* transform: translate(-50%, 0); */
   display: grid;
   grid-template-columns: repeat(2, auto); /* Adjust based on the number of columns you need */
   gap: 10px; /* This sets both row and column gaps to 10px */
   margin: 0 auto;
   margin-top: 20px;
-
 }
+
 .line-break {
   display: block;
   margin-top: -10px; /* Adjust as needed */
@@ -539,18 +537,15 @@ a {
 }
 
 
-.project-categories {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  margin: 20px 0;
-  grid-gap: 5px;
-  grid-row-gap: 10px;
-  width: 100%;
-  min-width: none;
-  /* Default to 2 columns for very small widths if needed */
-  /* grid-template-columns: repeat(2, 1fr); */
+  .project-categories {
+      bottom: 40px;
+      left: 50%;
+      display: grid;
+      grid-template-columns: repeat(2, auto); /* Adjust based on the number of columns you need */
+      gap: 10px; /* This sets both row and column gaps to 10px */
+      margin: 0 auto;
+      margin-top: 20px;
+    
 }
 
 
@@ -640,7 +635,7 @@ a {
   }
 }
 
-@media screen and (max-width: 775px) {
+/* @media screen and (max-width: 775px) {
   .project-categories {
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
@@ -649,7 +644,7 @@ a {
     width: fit-content;
     margin: 20px auto;
   }
-}
+} */
 @media screen and (min-width: 620px) {
     .head-menu-wrap {
       grid-template-columns: repeat(3, auto); /* Adjust for fewer columns on smaller screens */
@@ -658,7 +653,13 @@ a {
       margin-top: 30px;
 
     }
-  
+    .project-categories {
+      grid-template-columns: repeat(3, auto); /* Adjust for fewer columns on smaller screens */
+      gap: 10px; /* Keep the gap consistent */
+      width: 80%; /* Adjust width as necessary */
+      margin-top: 30px;
+
+    }
   
 
   #nav {
@@ -717,6 +718,12 @@ a {
 @media screen and (min-width: 900px) {
   .head-menu-wrap {
     grid-template-columns: repeat(6, auto); /* Consistent adjustment for very small screens */
+    gap: 10px; /* Maintains the gap consistency */
+    margin-top: 50px;
+
+  }
+  .project-categories {
+    grid-template-columns: repeat(5, auto); /* Consistent adjustment for very small screens */
     gap: 10px; /* Maintains the gap consistency */
     margin-top: 50px;
 
