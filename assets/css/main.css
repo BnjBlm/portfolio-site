@@ -375,13 +375,6 @@ img {
   text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
 }
 
-.technical-skills .card__meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* Adjust as needed */
-  align-items: center; /* Adjust as needed */
-  
-}
 
 .project-card {
   padding: 10px;
@@ -571,7 +564,7 @@ a {
 .project-technology {
   border: 1px solid #222;
   border-radius: 2px;
-  margin: 0 5px;
+  margin: 0 0px;
   padding: 3px 5px;
 }
 
